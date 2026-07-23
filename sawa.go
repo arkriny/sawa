@@ -12,6 +12,7 @@ import (
 //go:embed templates
 var templatesFS embed.FS
 
+// TODO: factor out common HTML structure into _layout.tmpl.
 var templates = template.Must(template.ParseFS(templatesFS, "templates/*"))
 
 type User struct {
